@@ -1,19 +1,43 @@
 .square {
   background: #222;
   border: 2px solid #f4f4f4;
-  border-radius: 8px;
-  font-size: 20px;
+  border-radius: 12px;
+  font-size: 28px;
   font-weight: bold;
-  height: 80px;
-  width: 80px;
+  height: 90px;
+  width: 90px;
   cursor: pointer;
-  margin: 2px;
+  margin: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #f4f4f4;
+  transition: all 0.2s ease-in-out;
 }
-
 .square:hover {
   background-color: #ff4242;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .square {
+    width: 70px;
+    height: 70px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 400px) {
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    margin: 2px;
+  }
+  
+  .status {
+    font-size: 14px;
+    margin: 0;
+    padding: 6px;
+  }
 }

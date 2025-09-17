@@ -1,7 +1,7 @@
 .game {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 24px;
   font-family: monospace;
@@ -9,6 +9,8 @@
   background: #222;
   color: #f6eded;
   border-radius: 32px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .gameContent {
@@ -17,40 +19,49 @@
   gap: 40px;
   justify-content: center;
   align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .gameBoard {
+  background: #111;
+  border-radius: 16px;
+  border: 2px solid #f4f4f4;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: #111;
-  border-radius: 16px;
-  border: 2px solid #f4f4f4;
   padding: 20px;
+  flex: 1;
+  min-width: 280px;
 }
 
 .gameInfo {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: flex-start;
 }
-
+.gameInfo ol {
+  padding: 0;
+  list-style: none;
+}
 .gameInfo button {
-  font-size: 12px;
+  font-size: 14px;
   width: 200px;
   margin: 6px 0;
-  padding: 8px 10px;
+  padding: 10px 12px;
   border-radius: 8px;
   border: 2px solid #f4f4f4;
   background-color: #333;
   color: #f4f4f4;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .gameInfo button:hover {
   background-color: #ff4242;
+  transform: scale(1.05);
 }
 
 .title {
@@ -63,13 +74,34 @@
   text-shadow: 2px 2px 0 #000;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .gameContent {
     flex-direction: column;
+    gap: 20px;
     align-items: center;
   }
-
   .gameInfo button {
+    width: 100%; 
+    max-width: 300px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .gameBoard {
     width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .game {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .gameBoard {
+    padding: 12px;
   }
 }

@@ -1,9 +1,10 @@
 .status {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
-  margin: 8px 0;
-  color: #f1eded;
+  margin: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .boardRow {
