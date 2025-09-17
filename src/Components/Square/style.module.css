@@ -1,0 +1,19 @@
+.square {
+  background: #222;
+  border: 2px solid #f4f4f4;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4f4f4;
+}
+
+.square:hover {
+  background-color: #ff4242;
+}
