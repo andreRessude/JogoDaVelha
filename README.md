@@ -1,12 +1,7 @@
-# React + Vite
+# Jogo da Velha
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto consiste em um protótipo de um Jogo da Velha (Tic Tac Toe) funcional. 
+Foi desenvolvido como atividade da matéria de Desenvolvimento Web Front End do Curso de Análise e Desenvolvimento de Sistemas do IFSP-BRA com intuito de firmar e botar em prática os conceitos aprendidos em aula.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Por: André Ressude.

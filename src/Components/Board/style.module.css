@@ -2,15 +2,15 @@
   font-weight: bold;
   font-size: 24px;
   text-align: center;
-  margin: 8px 0;
-  color: #f1eded;
+  margin: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .boardRow {
   display: flex;
   justify-content: center;
 }
-
 @media (max-width: 600px) {
   .status {
     font-size: 20px;

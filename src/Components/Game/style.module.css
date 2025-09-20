@@ -1,13 +1,15 @@
 .game {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 24px;
   font-family: monospace;
   background: #222;
   color: #f6eded;
   border-radius: 32px;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .gameContent {
@@ -19,14 +21,16 @@
 }
 
 .gameBoard {
+  background: #111;
+  border-radius: 16px;
+  border: 2px solid #f4f4f4;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: #111;
-  border-radius: 16px;
-  border: 2px solid #f4f4f4;
   padding: 20px;
+  flex: 1;
+  min-width: 280px;
 }
 
 .buttons {
@@ -44,16 +48,18 @@
   gap: 8px;
   width: 200px;
   margin: 6px 0;
-  padding: 8px 10px;
+  padding: 10px 12px;
   border-radius: 8px;
   border: 2px solid #f4f4f4;
   background-color: #333;
   color: #f4f4f4;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.2s ease-in-out;
 }
 .btnReplay:hover {
   background-color: #ff4242;
+  transform: scale(1.05);
 }
 
 .title {

@@ -7,13 +7,13 @@
   height: 100px;
   width: 100px;
   cursor: pointer;
-  margin: 2px;
+  margin: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #f4f4f4;
+  transition: all 0.2s ease-in-out;
 }
-
 .square:hover {
   background-color: #ff4242;
 }
