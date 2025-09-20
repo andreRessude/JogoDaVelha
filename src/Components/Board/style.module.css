@@ -1,6 +1,6 @@
 .status {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
   margin: 12px;
   text-transform: uppercase;
@@ -10,4 +10,9 @@
 .boardRow {
   display: flex;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  .status {
+    font-size: 20px;
+  }
 }

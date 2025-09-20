@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Board from '../Board';
-import jumpTo from './jumpTo';
+import Button from 'react-bootstrap/Button';
 import styles from './style.module.css'
 
 export default function Game() {
@@ -8,6 +8,7 @@ export default function Game() {
     const [currentMove, setCurrentMove] = useState(0);
     const xIsNext = currentMove % 2 === 0;
     const currentSquares = history[currentMove];
+    const [darkMode, setDarkMode] = useState(false);
 
     function handlePlay(nextSquares) {
       const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -15,19 +16,10 @@ export default function Game() {
       setCurrentMove(nextHistory.length - 1);
     }
 
-    const moves = history.map((squares, move) => {
-      let description;
-      if (move > 0) {
-        description = 'Ir para o ' + move + 'º movimento';
-      } else {
-        description = 'Ir para o inicio';
-      }
-      return (
-        <li key={move}>
-          <button onClick={() => jumpTo(move, setCurrentMove)}>{description}</button>
-        </li>
-      );
-    });
+    function restart() {
+      setHistory([Array(9).fill(null)]);
+      setCurrentMove(0);
+    }
 
     return (
       <div className={styles.game}>
@@ -36,8 +28,10 @@ export default function Game() {
           <div className={styles.gameBoard}>
             <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
           </div>
-          <div className={styles.gameInfo}>
-            <ol>{moves}</ol>
+          <div className={styles.buttons}>
+            <Button className={styles.btnReplay} onClick={restart}>
+              RESET <i class="bi bi-repeat" style={{fontSize:'30px'}}></i>
+            </Button>
           </div>
         </div>
       </div>
